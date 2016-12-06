@@ -11,10 +11,12 @@ This allows you to quickly identify if certain font files are used more heavily 
 - Create a bookmark in your browser:
   - Name
   
-        PromInc Font Analyzer
+          PromInc Font Analyzer
+
   - URL
   
-        javascript:(function(){ if(!document.getElementById('PromIncFontAnalyzer')){ var fontAnalyzer=document.createElement('script'); fontAnalyzer.src='http://promincproductions.com/seotools/fontanalyzer/fonts_used_analyzer.js'; fontAnalyzer.id='PromIncFontAnalyzer'; document.body.appendChild(fontAnalyzer); fontAnalyzer.onload = function() { analyzeFonts(); } } else { analyzeFonts(); } })();
+          javascript:(function(){ if(!document.getElementById('PromIncFontAnalyzer')){ var fontAnalyzer=document.createElement('script'); fontAnalyzer.src='http://promincproductions.com/seotools/fontanalyzer/fonts_used_analyzer.js'; fontAnalyzer.id='PromIncFontAnalyzer'; document.body.appendChild(fontAnalyzer); fontAnalyzer.onload = function() { analyzeFonts(); } } else { analyzeFonts(); } })();
+
 ### Daily Usage
 - View the web page you wish to analyze
 - Click on the bookmarklet.  The script will analzye your page and generate a report explaining which fonts are used and where on the page.
