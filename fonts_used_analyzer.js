@@ -5,8 +5,8 @@
 * 
 * @author PromInc
 * @email prominc@hotmail.com
-* @version 1.0
-* @date 2016-12-02
+* @version 1.1
+* @date 2016-12-09
 */
 
 function analyzeFonts() {
@@ -121,7 +121,7 @@ outputHtmlFoot += "</html>";
 
 // Compile HTML for font familes used
 fontFamiliesHtml += "<div>";
-	fontFamiliesHtml += "<h2>Font Families Used</h2>";
+	fontFamiliesHtml += "<h2>Font Families Used (" + Object.keys(usedFontFamilies).length + ")</h2>";
 	fontFamiliesHtml += "<div id=\"showAllElements\" class=\"action\" style=\"display:none;\" onclick=\"showElements();\">Show all elements</div>";
 	for( var fontFamily in usedFontFamilies ) {
 		if(usedFontFamilies.hasOwnProperty(fontFamily)) {
@@ -129,7 +129,7 @@ fontFamiliesHtml += "<div>";
 				fontFamiliesHtml += "<b>Font Name:</b>";
 				fontFamiliesHtml += "<div>";
 					fontFamiliesHtml += fontFamily + " (" + usedFontFamilies[fontFamily] + " instances)";
-					fontFamiliesHtml += "<div class=\"action\" onclick=\"showElements('" + fontFamily.hashCode() + "');\">Hide elements not using this font</div>";
+					fontFamiliesHtml += "<div class=\"action\" onclick=\"showElements('" + fontFamily.hashCode() + "');\">Show only elements using this font</div>";
 				fontFamiliesHtml += "</div>";
 			fontFamiliesHtml += "</div>";
 		}
