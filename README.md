@@ -15,7 +15,7 @@ This allows you to quickly identify if certain font files are used more heavily 
 
   - URL
   
-          javascript:(function(){ if(!document.getElementById('PromIncFontAnalyzer')){ var fontAnalyzer=document.createElement('script'); fontAnalyzer.src='http://promincproductions.com/seotools/fontanalyzer/fonts_used_analyzer.js'; fontAnalyzer.id='PromIncFontAnalyzer'; document.body.appendChild(fontAnalyzer); fontAnalyzer.onload = function() { analyzeFonts(); } } else { analyzeFonts(); } })();
+          javascript: (function () { if (!document.getElementById('PromIncFontAnalyzer')) { var fontAnalyzer = document.createElement('script'); fontAnalyzer.src = 'https://promincproductions.com/seotools/fontanalyzer/fonts_used_analyzer.js'; fontAnalyzer.id = 'PromIncFontAnalyzer'; document.body.appendChild(fontAnalyzer); fontAnalyzer.onload = function () { process(); }; fontAnalyzer.onerror = (error) => { alert("ERROR: an unexpected error occured.  (may be CSP protection)"); }; } else { process(); }; function process() { if( typeof analyzeFonts != 'function' ) { alert("ERROR: function analyzeFonts not found"); } else { analyzeFonts(); } } })();
 
 ### Daily Usage
 - View the web page you wish to analyze
